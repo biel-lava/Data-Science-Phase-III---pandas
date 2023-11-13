@@ -29,6 +29,8 @@ import numpy as np
 # default practice dataframe
 data = pd.DataFrame(np.arange(36).reshape((6,6)), index = ["alpha", "bravo", "charlie", "delta", "echo", "foxtrot"], columns = ["1", "2", "3", "4", "5", "6"])
 
+data["7"] = 32 # creating a column that does not exist before 
+
 print(data)
 
 
