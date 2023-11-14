@@ -38,6 +38,11 @@ Notes:
 '''
 #'''
 
+import pandas as pd
 
+data = {"student_id":["101", "53", "128", "3"], "name":["Ulysses", "William", "Henry", "Henry"], "age":[13, 10, 6, 11] }
+df = pd.DataFrame(data)
+
+print(df.loc[df["student_id"]== 101,["name", "age"]])
 
 #'''
