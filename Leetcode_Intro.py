@@ -36,7 +36,7 @@ Difficulty: Easy
 Notes:  
     - Select certain columns for a single row
 '''
-#'''
+'''
 
 import pandas as pd
 
@@ -45,4 +45,22 @@ df = pd.DataFrame(data)
 
 print(df.loc[df["student_id"]== 101,["name", "age"]])
 
-#'''
+'''
+
+'''
+Problem # 2883: Drop Missing Data
+Date: 11/16/23
+Link: https://leetcode.com/problems/drop-missing-data/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata
+Difficulty: Easy
+Notes:  
+    - Remove rows with missing data
+'''
+import pandas as pd
+
+data = {"student_id":[32, 217, 779, 849], "name":["Piper", None, "Georgia", "Willow"], "age":[5, 19, 20, 14]}
+
+df = pd.DataFrame(data)
+
+clean = df.dropna()
+
+print(clean)
