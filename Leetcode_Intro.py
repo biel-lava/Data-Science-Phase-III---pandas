@@ -55,6 +55,8 @@ Difficulty: Easy
 Notes:  
     - Remove rows with missing data
 '''
+
+'''
 import pandas as pd
 
 data = {"student_id":[32, 217, 779, 849], "name":["Piper", None, "Georgia", "Willow"], "age":[5, 19, 20, 14]}
@@ -64,3 +66,27 @@ df = pd.DataFrame(data)
 clean = df.dropna()
 
 print(clean)
+'''
+
+
+'''
+Problem # 2887: Fill Missing Data
+Date: 11/16/23
+Link: https://leetcode.com/problems/fill-missing-data/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata
+Difficulty: Easy
+Notes:  
+    - Fill missing rows in the quantity column with 0
+'''
+
+#'''
+
+import pandas as pd
+
+data = {"name":["Wristwatch", "WirelessEarbuds", "GolfClubs", "Printe"], "quantity":[None, None, 779, 849], "price":[135, 821, 9319, 3051]}
+
+products = pd.DataFrame(data)
+
+print(products.fillna({"quantity":0}))
+
+
+#'''
