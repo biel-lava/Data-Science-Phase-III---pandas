@@ -78,7 +78,7 @@ Notes:
     - Fill missing rows in the quantity column with 0
 '''
 
-#'''
+'''
 
 import pandas as pd
 
@@ -88,5 +88,33 @@ products = pd.DataFrame(data)
 
 print(products.fillna({"quantity":0}))
 
+
+'''
+
+
+'''
+Problem # 2884: Modify Columns
+Date: 11/27/23
+Link: https://leetcode.com/problems/modify-columns/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata
+Difficulty: Easy
+Notes:  
+    - Multiply the entries in the salary column by 2
+    - helpful resources: https://stackoverflow.com/questions/33768122/python-pandas-dataframe-how-to-multiply-entire-column-with-a-scalar
+
+
+'''
+
+
+#'''
+
+import pandas as pd
+
+data = {"name":["Jack", "Piper", "Mia", "Ulysses"], "salary":[19666, 74754, 62509, 54866]}
+
+employees = pd.DataFrame(data)
+
+employees.loc[:, "salary"] *= 2 # for all the rows under the "salary" column, lahat nung values will be multiplied by 3 
+
+print(employees)
 
 #'''
