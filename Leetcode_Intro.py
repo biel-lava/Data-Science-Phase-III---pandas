@@ -105,7 +105,7 @@ Notes:
 '''
 
 
-#'''
+'''
 
 import pandas as pd
 
@@ -116,5 +116,31 @@ employees = pd.DataFrame(data)
 employees.loc[:, "salary"] *= 2 # for all the rows under the "salary" column, lahat nung values will be multiplied by 3 
 
 print(employees)
+
+'''
+
+
+
+'''
+Problem # 2885: Rename Columns
+Date: 11/27/23
+Link: https://leetcode.com/problems/rename-columns/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata
+Difficulty: Easy
+Notes:  
+    - Rename the existing columns into a new set of names
+    - 
+'''
+
+#'''
+
+import pandas as pd
+
+data = {"id":[1, 2, 3, 4, 5], "first":["Mason", "Ava", "Taylor", "Georgia", "Thomas"], "last":["King", "Wright", "Hall", "Thompson", "Moore"], "age":[6, 7, 16, 18, 10]}
+
+students = pd.DataFrame(data)
+up_students = students.rename(columns = {"id":"student_id", "first":"first_name", "last":"last_name", "age":"age_in_years"})
+
+print(students)
+print(up_students)
 
 #'''
